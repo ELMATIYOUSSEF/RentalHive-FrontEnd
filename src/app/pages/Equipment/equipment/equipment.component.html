@@ -1,0 +1,88 @@
+
+<div>
+<br>
+  <form class="row g-3" (submit)="onSubmit()">
+        <div class="col-auto ">
+            <label for="name" class="visually-hidden">Name</label>
+            <input type="text"  class="form-control" id="name" name ="name" [(ngModel)] = "toSave.name">
+          </div>
+          <div class="col-auto">
+            <label for="input" class="visually-hidden">cout Location</label>
+            <input type="number" name="cout_Location" class="form-control" id="input" placeholder="Cout Location"  [(ngModel)] = "toSave.cout_Location">
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-success">save</button>
+          </div>
+  </form>
+  <br>
+</div>
+
+<div class="row">
+    <div class="col-md-12 pt-5">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Simple Table</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary pt-3">
+                <th>
+                    id
+                  </th>
+                <th>
+                  Name
+                </th>
+                <th>
+                    quantite
+                </th>
+                <th>
+                    cout Location
+                </th>
+                <th>
+                    equipments Items
+                </th>
+                <th>
+                  add Items
+              </th>
+              <th>
+               upDate equipment
+            </th>
+            <th>
+              Delete equipment
+          </th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let equipment of equipments" class="pt-3">
+                    <td>
+                      {{ equipment.id }}
+                    </td>
+                    <td>
+                      {{ equipment.name }}
+                    </td>
+                    <td>
+                      {{ equipment.quantite }}
+                    </td>
+                    <td>
+                     {{ equipment.cout_Location }}
+                    </td>
+                    <td>
+                        <button class="btn btn-info"  (click)="open(equipment.equipmentItems)">shows</button>
+                    </td>
+                    <td>
+                      <button class="btn btn-success"  (click)="open(equipment.equipmentItems)">add Items</button>
+                   </td>
+                   <td>
+                    <button class="btn btn-warning"  (click)="upDate(equipment.id)">Update</button>
+                 </td>
+                 <td>
+                  <button class="btn btn-danger"  (click)="delete(equipment.id)">Delete</button>
+               </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

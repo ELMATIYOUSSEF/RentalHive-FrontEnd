@@ -1,0 +1,23 @@
+#sidebarMenu{
+    height: 92vh;
+    position: -webkit-fixed;
+   
+}
+.nav-link {
+    text-decoration: none;
+    color: #333; /* Adjust the color as needed */
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #f8f9fa; /* Change the background color on hover */
+}
+
+.nav-link.active {
+    background-color: #007bff; /* Change the background color for the active link */
+    color: #fff; /* Adjust the text color for the active link */
+}
+
+.nav-link p {
+    margin: 0; /* Remove any default margin for the paragraph inside the link */
+}

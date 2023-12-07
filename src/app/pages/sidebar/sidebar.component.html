@@ -1,0 +1,14 @@
+
+      <nav id="sidebarMenu" class="col-md-9 col-lg-12 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a *ngFor="let menuItem of menuItems" routerLinkActive="active" class=" nav-link {{menuItem.class}}" aria-current="page" [routerLink]="[menuItem.path]">
+                  <p>{{menuItem.title}}</p>
+                </a>
+              </li>
+            </ul>
+        </div>
+      </nav>
+  
+ 
